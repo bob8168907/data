@@ -1,0 +1,24 @@
+安装redis  选择性安装redis客户端  下载jar包 使用java连接redis
+1. 切换到指定目录 C:\redis 运行 redis-server.exe redis.windows.conf 
+2. 这时候另启一个cmd窗口，原来的不要关闭，不然就无法访问服务端了。 redis-cli.exe -h 127.0.0.1 -p 6379
+3. set myKey abc  
+4. get myKey
+5. key *  //查看所有的key
+
+，在redis的目录下执行（执行后就作为windows服务了）
+
+redis-server --service-install redis.windows.conf
+2，安装好后需要手动启动redis
+
+redis-server --service-start
+3，停止服务
+
+redis-server --service-start
+4，卸载redis服务
+
+redis-server --service-uninstall
+
+设置密码
+config set requirepass SAOjHRGRk68oUk9oZFzk
+查看密码
+config get requirepass

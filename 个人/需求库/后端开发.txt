@@ -1,0 +1,11 @@
+1.设置后端 开发环境,测试环境,正式环境
+spring.prifiles.active: dev
+
+spring cloud配置
+外部地址,注册中心地址. 阿里云oss配置,文件上传限制,服务注册与发现,rest服务使用feign解析，如果有多个时用英文逗号分隔
+session:mode local,remote
+
+微信支付  微信支付API共四份（证书pkcs12格式、证书pem格式、证书密钥pem格式、CA证书
+宝付支付  
+
+rap(阿里),swagger接口开发

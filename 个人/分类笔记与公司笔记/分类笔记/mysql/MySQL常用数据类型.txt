@@ -1,0 +1,14 @@
+tinyint/smallint/mediumint/int/bigint-->1B/2B/3B/4B/8B
+float/double-->单精度/双精度浮点型
+decimal-->不会产生精度丢失的单精度/双精度浮点型
+date-->日期类型
+time-->时间类型
+datetime-->日期时间类型
+year-->年类型
+char-->定长字符串类型
+varchar-->可变长字符串类型
+
+tinyblob/blob/mediumblob/longblob-->255B/64K/16M/4G大小的图片/音乐等二进行数据
+
+tinytext/text/mediumtext/longtext-->255B/64K/16M/4G大小的文本数据
+

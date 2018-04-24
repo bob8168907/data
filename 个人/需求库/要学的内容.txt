@@ -1,0 +1,109 @@
+fiddler 抓包工具 汉化
+
+ConcurrentHashMap
+ 第一阶段linux+搜索+hadoop体系Linux基础→shell编程→高并发架构→hadoop体系→HDFS→mapreduce→hbase→zookeeper→hive→lucene搜索→solr/solrcloud→elasticsearch分布式搜索→CM+CDH集群管理→impala→oozie→flume→sqoop第二阶段机器学习R语言→mahout第三阶段storm流式计算kafka→storm→redis第四阶段spark内存计算scala编程→spark core→spark sql→spark streaming→spark mllib→spark graphx→项目实战四→python机器学习→spark python编程第五阶段云计算平台docker→kvm→openstack云计算当然每个阶段找一些合适的项目练手是必须的，  可以巩固相关知识点，了解其作用及相关的应用问题等等。 
+
+ Spark、深度学习、算法研究、Hadoop、Python   layer.js 弹窗
+1. 分布式存储系统 
+2. 分布式计算系统 
+3. 分布式管理系统
+foundation semantic ui pure uikit 
+    MyBatis物理分页插件  FastDFS分布式文件系统 Swagger2接口测试框架  Jenkins   持续集成工具
+代码优化
+jenkins 自动化构建
+ JVM性能调优监控工具jps、jstack、jmap、jhat、jstat、hprof使用详解  管理gc
+典型的LAMP架构，是使用Myisam搜索引擎,MPSS,MemcacheQ
+es6,ts(typescript),ESlint(js检测工具),
+分布式系统以及分布式系统之间的中间件(如何协调每个系统工作)
+消息中间件(ActiveMQ JMS):消息队列,消息主题  
+cvs 版本控制
+双向绑定 mvvm: extjs,angularjs,vue.js
+jfinal
+Nginx  负载均衡服务器
+react native redux ecma6script
+webpack
+Unity3D五子棋大战
+pgm
+h5 jsx  桥  python web Django
+jQuery Mobile
+sencha touch
+apache shiro 
+cdn
+令牌登录  sso单点登录
+spring security
+tps
+rpc远程服务
+分布式服务开发
+单点
+dubbo
+搞分布式  研究大型项目的技术架构
+okhttp 
+redis mongodb
+dubbo-admin 进入文件夹 进行打包 mvn package -Dmaven.skip.test=true  
+ZooKeeper
+springcloud
+docker
+r语言 统计和数据分析开发的语言
+go语言 
+伪代码
+mock 测试
+solr,Lucene 搜索引擎
+jrebel 热部署
+python 简明教程  python编写的运维工具salt
+运维:性能的优化与提升
+
+hadoop 大数据 安装配置  查询相关书籍    科学数据,金融数据 零售数据 社交网络数据 交通数据 物联网数据  竞争是数据的竞争,谁拥有更多的数据,谁就拥有未来   瓶颈 存储容量 读写速度 计算效率  Google大数据技术 MapReduce,BigTable,GFS
+革命性变化
+1.成本降低,能用PC机,不需要用大型机和高端存储  
+2.硬件故障视为常态,通过软件保证可靠性
+3.简化并行分布式计算,无须控制节点同步和数据交换
+Google只发表技术论文,没有开放源代码  模仿Google大数据技术的开源实现  Hadoop 小象 
+Hadoop 功能与优势  开源的 分布式存储+分布式计算平台 Apache
+组成 HDFS:分布式文件系统,存储海量的数据
+     MApReduce: 并行处理框架,实现任务分解和调度
+用处: 搭建大型数据库,PB级数据的存储,处理、分析、统计等业务 (搜索引擎,商业智能(故障诊断,风险评估,欺诈预警,智能营销,模式识别,信用评级),日志分析,数据挖掘)
+优势: 高扩展(可增加硬件,增强性能的提升,能量的提升) 低成本(只需PC机,通过软件即可保证数据) 成熟的生态圈(开源,还有很多工具 Workflow,support,More HighLevel interfaces,Engine Logic,File System,Structed Data)
+应用情况 国内:京东,百度,新浪,淘宝,网易,华为,腾讯,小米等 国外:hulu,intel,Linked,YAHOO!,facebook等
+
+工具 Hive:将SQL语句转化为Hadoop任务去执行,降低了使用Hadoop的门槛
+     HBASE: 传统的关系型数据库,hbase放弃事务特性,追求更高的扩展,实现对表数据的读写功能
+Zookeeper  管理员.监控状态.管理配置,维护数据的一致性
+
+会将数据块保留三份 分布在两个机架内的三个节点  HDFS写入文件的流程 1.数据冗余,硬件容错 2.流式数据访问(1次写入,多次读取) 3.存储大文件 适合数据批量读写,吞吐量高. 不适合交互式应用,低延迟很难满足
+MapReduce 一个任务分成多个子任务(map),并行执行后,合并结果(reduce)
+100GB的网站访问日志文件,找出访问次数最多的IP地址  Job&Task
+jobTracker 1.作业调度 2.分配任务,监控任务执行进度 3.监控TaskTracker的状态
+TaskTracker 1.执行任务 2.回报任务状态
+容错机制 当运行出错 1.重复执行 2.推测执行 
+
+
+版本 1.2 准备Linux环境 1.安装虚拟机,安装linux 2.阿里云的云主机  putty,Xshell
+
+在linux上安装jdk、tomcat、maven、vsftpd、nginx、文件服务器、mysql、git  
+
+mysql 表结构，表关系，索引，时间戳
+
+数据库的读写分离会
+读写分离很火的  读写分离要回做到数据的实时更新
+springboot+dubbo+thymeleaf
+接口联调
+spring boot 回使用注解就行
+spring boot 回集成第三方库
+
+
+配置jdk、tomcat、maven并通过archetype创建web项目，讲解maven的pom文件配置，使用git对初始化代码提交。使用mybatis-generator、mybatis-plugin、mybatis-pagehelper，并生成我们项目所需的dao层代码文件。对spring官方demo进行指引。
+
+如何避免横向越权、纵向越权安全漏洞。MD5明文加密和增加salt值。guava缓存的使用，高复用服务响应对象的设计思想及抽象封装。mybatis-plugin的使用技巧。
+
+递归分类，并且支持分类无限层级树状结构，通过分类对象的排重讲解重写hashcode方法和equal方法的重要性。
+
+高复用的核心方法并解决浮点型在商业运算中丢失精度的问题,Bigdecimal源码
+
+对mybatis自动生成主键的处理，进行配置和使用的讲解。并进一步巩固横向越权漏洞
+
+支付宝对接的核心文档，支付宝的配置，并调通支付宝官方demo，解析支付宝SDK源码，生成二维码并持久化到图片服务器，手把手把支付宝集成到我们的项目当中。并分享外网穿透和远程调试对接的技巧。...
+
+支付预留扩展性的思路。如何避免业务逻辑中容易发生的横向越权和纵向越权等安全漏洞。​同时引出如何可以避免未来在SOA架构中容易引起故障的枚举引起的坑。
+
+阿里云的玩法，线上服务器的配置、线上域名的解析、线上vsftpd、nginx等等配置、线上基于shell的发布脚本的开发，线上环境的验证，故障排查与解决等内容，让我们的开发结果跑在真实的生产环境。
+

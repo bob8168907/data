@@ -1,0 +1,58 @@
+安装方式：
+1、输入以下命令，以查看可用的JDK软件包列表;
+yum search java | grep -i --color JDK
+2、在CentOS linux安装 JAVA SDK
+在命令行终端以root用户 输入以下命令yum安装 OpenSDK ：
+yum install java-1.8.0-openjdk  java-1.8.0-openjdk-devel  #安装openjdk
+ 
+待以上命令执行完成，则表示jdk安装成功。
+ 
+3、在centos linux上设置JAVA_HOME environment variable(JAVA_HOME环境变量)
+rhel 和 centos linux 使用yum命令后，将 OpenSDK 安装到/usr/lib/jvm/ 目录：
+4、用cd 命令进入到jvm下唯一的一个目录中 java-1.8.0-openjdk-1.8.0.51.x86_64 ，而 jre-1.8.0-openjdk.x86_64 这个链接是指向  java-1.8.0-openjdk-1.8.0.51.x86_64 这个文件夹，所以，可以直接用export命令将 JAVA_HOME 指向 jre-1.8.0-openjdk.x86_64 这个链接。
+即使用export命令:
+ export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.51.x86_64
+但是这样只能在当前会话中有效，一旦注销下线，就失效了。
+5、标准方式配置环境变量
+进行下面的操作：
+vi  /etc/profile
+将下面的三行粘贴到 /etc/profile   中：
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.51.x86_64
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+保存关闭，后，执行：source  /etc/profile  #让设置立即生效。
+在输入以下命令，来确认这三个变量是否设成了我们想要的：
+[root@~]# echo $JAVA_HOME
+[root@ ~]# echo $CLASSPATH
+[root@ ~]# echo $PATH
+ 
+6、测试java是否安装配置成功
+
+ 
+查看 java 版本，输入命令：
+[root@~]#  java     -version
+
+7、创建一个java小程序测试下，名字叫 HelloWorld.java ，输入以下命令：
+[root@ ~]# touch HelloWorld.java
+
+将以下代码复制到 HelloWorld.java 中 ：
+public class HelloWorld {
+pu
+blic static void main(String[] args) {
+System.out.println("Hello, World! This is a test code by nixCraft!");
+}
+}
+
+复制进去后，保存关闭文件。编译和运行这个小程序，输入以下命令:
+[root@ ~]#  javac HelloWorld.java
+[root@ ~]#  java HelloWorld
+
+会得到以下显示：
+Hello, World! This is a test code by nixCraft!
+
+8、如何(怎样)运行 .jar  这类java应用？
+
+语法如下：
+[root@~]# java -jar file.jar
+[root@~]# java -jar /path/to/my/java/app.jar  #/path/to/my/java/app.jar表示应用的路径
+[root@ ~]# java -jar /path/to/my/java/app.jar arg1 arg2   # arg1表示参数1 ，arg2表示参数2

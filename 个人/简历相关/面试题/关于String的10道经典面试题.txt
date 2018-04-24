@@ -1,0 +1,19 @@
+1、String不是基本数据类型。 
+
+2、String是final类型的，不可变。 
+
+3、比较字符串的值是否相同用equals,比较字符串对象是否同一个用==。 
+
+4、jdk7+中的switch可以使用String类型。 
+
+5、创建了两个，"abc"本身创建在常量池，通过new又创建在堆中。
+
+6、String、StringBuffer、StringBuilder最大的不同是String不可变，后者可变。StringBuffer是线程安全的，StringBuilder线程不安全速度较快。
+
+7、trim去掉字符串首尾的空白字符。 
+
+8、既然String是final的，所以不能被继承。 
+
+9、可以自定义java.lang.String类并编译成功，但不能被加载使用，具体请学习类加载机制。 
+
+10、String > byte[] 通过String类的getBytes方法；byte[] > String通过new String(byte[])构造器。

@@ -1,0 +1,42 @@
+tps
+rpc远程服务
+分布式服务开发
+单点
+dubbo
+搞分布式  研究大型项目的技术架构
+
+webpack 打包器
+pgm
+react native
+h5 jsx vue.js 桥
+jQuery Mobile
+sencha touch
+
+
+Hadoop是很多组件的集合，主要包括但不限于MapReduce，HDFS，HBase，ZooKeeper。MapReduce模仿了Google MapReduce，HDFS模仿了Google File
+ System，HBase模仿了Google BigTable，ZooKeeper或多或少模仿了Google Chubby（没有前3个出名），所以下文就只提MapReduce、HDFS、HBase、ZooKeeper吧
+
+什么是代理模式？
+代理模式：在调用处不直接调用目标类进行操作，而是调用代理类，然后通过代理类来调用目标类进行操作。在代理类调用目标类的前后可以添加一些预处理和后处理操作来完成一些不属于目标类的功能。
+
+为什么要使用代理模式？
+通过代理模式可以实现对目标类调用的控制、在目标类调用前/后进行一些不属于目标类的操作，如：数据验证、预处理、后处理、异常处理等
+
+什么是静态代理什么是动态代理？
+
+静态代理：代理类只能实现对”特定接口的实现类“进行代理
+动态代理：代理类可以实现对多种类的代理
+jdk代理和cglib代理区别在哪里？
+
+jdk动态代理：代理所有“实现的有接口”的目标类
+cglib动态代理：代理任意一个目标类，但对final类和方法无法代理
+不同点：jdk动态代理的目标类必须实现的有接口,因为在调用Proxy.newProxyInstance()的时候需要传入目标类的接口类。而cglib不做此限制。  
+
+代理 类似于 面向切面
+
+
+
+
+
+
+

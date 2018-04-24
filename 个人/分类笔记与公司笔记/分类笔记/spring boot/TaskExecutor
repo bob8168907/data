@@ -1,0 +1,25 @@
+@EnableAsync
+开启对异步的支持
+
+@Async
+声明这是一个异步的任务
+创建ThreadPoolTaskExecutor对象
+
+@Scheduled 时间调度 声明该方法是计划任务
+
+@EnableScheduling 声明开启对计划任务的支持
+
+实现Condition接口 重写matches方法 判断在不同操作系统上执行 在window上运行 则dir 若Linux 则ls
+
+@Target
+@Retenion
+
+使用@WiselyConfiguration 组合注解替代 @Configuration和@ComponentScan
+
+@Enable*开启一项功能的支持
+
+动态注册Bean
+
+@ContextConfiguration 加载ApplicationContext
+
+@ActiveProfiles 声明活动的profile  是prod  还是dev

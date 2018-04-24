@@ -1,0 +1,87 @@
+Java多态总结
+
+面向对象的三大特性：封装、继承、多态。从一定角度来看，封装和继承几乎都是为多态而准备的。这是我们最后一个概念，也是最重要的知识点。
+1.定义：
+多态：指允许不同类的对象对同一消息做出响应。即同一消息可以根据发送对象的不同而采用多种不同的行为方式。（发送消息就是函数调用）
+2.实现多态的技术称为：动态绑定（dynamic binding），是指在执行期间判断所引用对象的实际类型，根据其实际的类型调用其相应的方法。
+3.作用：消除类型之间的耦合关系。
+4.现实中，关于多态的例子不胜枚举。比方说按下 F1 键这个动作，如果当前在 Flash 界面下弹出的就是 AS 3 的帮助文档；如果当前在 Word 下弹出的就是 Word 帮助；在 Windows 下弹出的就是 Windows 帮助和支持。同一个事件发生在不同的对象上会产生不同的结果。
+5.下面是多态存在的三个必要条件，要求大家做梦时都能背出来！
+多态存在的三个必要条件
+一、要有继承；
+二、要有重写；
+三、父类引用指向子类对象。
+6.多态的好处：
+1)可替换性（substitutability）:多态对已存在代码具有可替换性。例如，多态对圆Circle类工作，对其他任何圆形几何体，如圆环，也同样工作。
+2)可扩充性（extensibility）:多态对代码具有可扩充性。增加新的子类不影响已存在类的多态性、继承性，以及其他特性的运行和操作。实际上新加子类更容易获得多态功能。例如，在实现了圆锥、半圆锥以及半球体的多态基础上，很容易增添球体类的多态性。
+3)接口性（interface-ability）:多 态是超类通过方法签名，向子类提供了一个共同接口，由子类来完善或者覆盖它而实现的。如图8.3 所示。图中超类Shape规定了两个实现多态的接口方法，computeArea()以及computeVolume()。子类，如Circle和 Sphere为了实现多态，完善或者覆盖这两个接口方法。
+4)灵活性（flexibility）:它在应用中体现了灵活多样的操作，提高了使用效率。
+5)简化性（simplicity）:多态简化对应用软件的代码编写和修改过程，尤其在处理大量对象的运算和操作时，这个特点尤为突出和重要。
+ 
+7.Java中多态的实现方式：接口实现，继承父类进行方法重写，同一个类中进行方法重载。
+8.Java中多态的分类：
+在java中，多态大致可以分为以下几种情况：
+1)person为父类，student为子类。那么：person p=new student()；
+2)fliable为接口，bird为实现接口的类，那么：fliable f=new bird()；
+3)fliable为抽象类，bird为继承fliable的类，那么：fliablef=new bird()；
+多态时需要说明p声明为父类的引用，但他实际为子类引用。但是他只能调用父类中的方法。如果子类中的方法覆盖了父类方法，那么将调用父类方法（虚方法调用）。接口多态也是同样的，也许你会问，如果f要调用自己的方法，那岂不是出错了？其实这里也是方法的覆盖，因为实现接口的子类肯定会实现接口中的方法， 所以此种情况下调用的是bird中的方法。但是如果bird有一个方法在接口中没有定义，那么f不能调用。
+9.instanceof运算符：
+java语言的多态机制导致了引用变量的声明类型和其实际引用对象的类型可能不一致，再结合虚方法调用规则可以得出结论：声明为同种类型的两个引用变量调用同一个方法时也可能会有不同的行为。这里就引入了instanceof运算符。
+那么如果我声明了person p=new student（）；我想将p转为student的可不可以？当然可以，但是就得强制转换了（儿子想成为父亲直接来，父亲想成为儿子你就强来）。
+通常在强制转换时加上instanceof来判断。
+if(p instanceof student) { student s=（student）p；}
+多态贯穿于java整个学习，比如在异常处理时写catch语句，我们规定必须子类异常写在前，父类异常写在后。为什么呢？原因就是多态了。我们的 catch语句格式：catch（Exception e）。java程序在产生异常时会自动生成一个异常对象，如果先产生一个子类异常，并且父类异常写在前，那么根据多态肯定会执行此catch语句，执行完 一条catch语句后将会跳出。
+10.实例：
+关于JAVA的多态性虽然自己也不是很懂，但是下面的这个例子让我理解了一些：
+class A
+{
+        public String show(D obj)...{
+               return ("A and D");
+        }
+        public String show(A obj)...{
+               return ("A and A");
+        }
+}
+class B extends A
+{
+        public String show(B obj)...{
+               return ("B and B");
+        }
+        public String show(A obj)...{
+               return ("B and A");
+        }
+}
+class C extends B{}
+class D extends B{}
+class E
+{
+      public static void main(String [] args)
+     {
+       A a1 = new A();
+       A a2 = new B();
+       B b = new B();
+       C c = new C();
+       D d = new D();
+       System.out.println(a1.show(b));   //①
+       System.out.println(a1.show(c));   //②
+       System.out.println(a1.show(d));   //③
+       System.out.println(a2.show(b));   //④
+       System.out.println(a2.show(c));   //⑤
+       System.out.println(a2.show(d));  // ⑥
+       System.out.println(b.show(b));    //⑦
+       System.out.println(b.show(c));    //⑧
+       System.out.println(b.show(d));    //⑨   
+      }
+}
+（三）答案
+ 
+             ①   A and A
+             ②   A and A
+             ③   A and D
+             ④   B and A
+             ⑤   B and A
+             ⑥   A and D
+             ⑦   B and B
+             ⑧   B and B
+             ⑨   A and D
+ 

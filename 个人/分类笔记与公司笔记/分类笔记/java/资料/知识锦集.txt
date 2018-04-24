@@ -1,0 +1,41 @@
+内容分发网络(CDN)是一种新型网络构建方式，它是为能在传统的IP网发布宽带丰富媒体而特别优化的网络覆盖层；而从广义的角度，CDN代表了一种基于质量与秩序的网络服务模式。
+简单地说，内容分发网络(CDN)是一个经策略性部署的整体系统，包括分布式存储、负载均衡、网络请求的重定向和内容管理4个要件，而内容管理和全局的网络流量管理(Traffic Management)是CDN的核心所在。通过用户就近性和服务器负载的判断，CDN确保内容以一种极为高效的方式为用户的请求提供服务。
+总的来说，内容服务基于缓存服务器，也称作代理缓存(Surrogate)，它位于网络的边缘，距用户仅有"一跳"(Single Hop)之遥。同时，代理缓存是内容提供商源服务器（通常位于CDN服务提供商的数据中心）的一个透明镜像。这样的架构使得CDN服务提供商能够代表他们客户，即内容供应商，向最终用户提供尽可能好的体验，而这些用户是不能容忍请求响应时间有任何延迟的。
+
+数据库 索引，监控  Vue.js开发外卖，滴滴app
+用linux开发，不涉及版权问题
+全文索引
+node.js
+三目运算,账号，邮箱，弄个邮箱接口
+购物车，爬虫，个人资料，头像上传，（下载）
+位置弄个三省联动
+弄个hibernater,struts2,spring,mybatis,spring mvc,均单独弄
+还有jar包
+oracle的标识符与mysql不一样，oracle要用序列，触发器,还有事务
+第三方登录 OAuth协议基本原理 接入QQ登录前置条件及开放平台账号申请  引入官方SDK	整合QQ登录SDK到WEB应用中 
+ruby语言，不关心数据类型 rbenv安装ruby
+java，不关心指针
+使用idea,maven yml文件配置serve,和数据库
+ps切图。将图片切出来
+自动登录给个状态，state1,重复登录给个状态state2.
+ps动作，可以改变图片大小，后缀名   发展5-5.5-6-7-cs
+
+spring 注解使用：
+@Repository("dao")
+@Service("biz")	@Resource(name="dao")
+<context:component-scan base-package="com.ben.biz.impl,com.ben.dao.impl"></context:component-scan> 
+切面注解
+<aop:aspectj-autoproxy/>  <bean id="myaspect" class="com.ben.model.Myaspect" />
+类上面 @Aspect 定义切面类
+@Pointcut("execution(* com.ben.biz..*.*(..))")
+	private void anyMethod(){}//定义一个切入点（方法）
+@Before("anyMethod()")
+    public void Before(JoinPoint joinPoint ){
+    	logger.info("连接点的对象"+joinPoint.getTarget().getClass().getSimpleName());
+    	logger.info("："+joinPoint.getSignature().getName());
+    	logger.info("方法的参数："+joinPoint.getArgs()[0]);
+    	logger.info("方法执行之前===================");
+        System.out.println("前置通知！");  
+    }     
+
+  
